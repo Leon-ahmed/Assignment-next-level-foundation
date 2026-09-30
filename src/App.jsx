@@ -2,7 +2,9 @@
  import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Mainlayout from "./layout/Mainlayout";
 import Homepage from"./pages/Homepage"
-import MovieList from "./pages/MovieList"
+ 
+import MovieListing from "./pages/MovieListing";
+
 function App() {
  const router = createBrowserRouter([
     {
@@ -10,7 +12,7 @@ function App() {
       element: <Mainlayout></Mainlayout>,
       children: [
         { index: true, element: <Homepage></Homepage> },
-        { path: "movies", element: <MovieList /> },
+        { path: "movies", element: <MovieListing /> },
       ],
     },
   ]);
